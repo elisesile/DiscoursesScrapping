@@ -41,7 +41,10 @@ class SpeechFetcher():
                 try :
 
                     if date < datetime.datetime(2019,1,1):
-                        speech['content'] = sp_content.select_one('span.clearfix').get_text().encode('latin1').decode('windows-1252').replace('\xa0', ' ')
+                        try :
+                            speech['content'] = sp_content.select_one('span.clearfix').get_text().encode('latin1').decode('windows-1252').replace('\xa0', ' ')
+                        except UnicodeEncodeError :
+                            speech['content'] = sp_content.select_one('span.clearfix').get_text()
                     else:
                         speech['content'] = " ".join([ content.get_text().replace('\xa0', ' ') for content in sp_content.select('div.discour--desc span.clearfix p')])
 
