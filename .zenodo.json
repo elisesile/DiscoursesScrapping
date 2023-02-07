@@ -1,0 +1,19 @@
+{
+    "language": "eng",
+    "license": "GPL-3.0",
+    "title": "Politic speeches fetcher for french public life.",
+    "upload_type": "software",
+    "keywords": [
+      "webmining",
+      "scraping",
+      "crawling"
+    ],
+    "creators": [
+      {
+        "affiliation": "médialab - Sciences Po",
+        "name": "Elise Noga Hartmann"
+      }
+    ],
+    "access_right": "open",
+    "description": "<p>A scrapping tool for official french political discourses.</p>"
+  }
